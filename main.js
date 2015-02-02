@@ -2,6 +2,7 @@
  * Created by Max on 16/09/2014.
  */
 
+var tileSize = 80;
 var interactive = true;
 // 1 create an new instance of a pixi stage
 var stage = new PIXI.Stage(0x66FF99,interactive);
@@ -35,6 +36,15 @@ var listChair = [
 for(i=0;i<=listChair.length-1;i++){
     stage.addChild(listChair[i]);
 }
+
+var dude = new MovingObject({
+    textures: [
+        PIXI.Texture.fromImage('sprites/greenblob.png')
+    ],
+    stepSize: tileSize
+});
+
+console.log(dude);
 
 //stage.addChild(new MovingObject(renderer,'n'));
 

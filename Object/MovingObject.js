@@ -36,4 +36,4 @@ function MovingObject (renderer,faceDirection) {
 
     return texture2;
 }
-//MovingObject.prototype = new Item;
+MovingObject.prototype = new Item;

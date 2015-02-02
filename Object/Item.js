@@ -108,21 +108,20 @@ function Item (renderer) {
         console.log("mouseUpHandler" +dirIndex + " y: " +currentAnimation.position.y + " x: " + currentAnimation.position.x);
 
             isMouseDown = false;
-        if (e.type == "mouseup") {
+
             // var angle = Math.atan2((e.offsetX - currentAnimation.position.x - 40), (e.offsetY - currentAnimation.position.y + 40));
-            /*        if (dirIndex = 3)
+             if (dirIndex == 3)
              {currentAnimation.position.y = currentAnimation.position.y + 40} //  down
 
-             if (dirIndex = 5)
+             if (dirIndex == 5)
              {currentAnimation.position.x = currentAnimation.position.x - 40} // left
-             */
-            //    if (dirIndex = 7)
-            //   { {currentAnimation.position.y = currentAnimation.position.y  - 40}}// up
 
-             if (dirIndex = 1)
+                if (dirIndex == 7)
+               { {currentAnimation.position.y = currentAnimation.position.y  - 40}}// up
+
+             if (dirIndex == 1)
              { currentAnimation.position.x = currentAnimation.position.x  + 40}// right
 
-        }
         e.preventDefault();
     }
 

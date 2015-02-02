@@ -86,4 +86,4 @@ function drawGriddedStage() {
     stage.addChild(chair);
 }
 */
-var item = new Item(renderer);
+//var item = new Item(renderer);

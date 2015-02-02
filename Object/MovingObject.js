@@ -7,15 +7,19 @@
  * Constructor MovingObject
  * @param {Object} params definition:
  * {
+ *     textures: {Array <PIXI.Texture>},
  *     facingDirection: MovingObject.DIRECTION_{UP|RIGHT|DOWN|LEFT},
  *     stepSize: {Number}
  * }
  */
 function MovingObject (params) {
-    // Inheritance (super)
-    PIXI.Sprite.call(this);
-
     params = params || {};
+
+    var textures = params.textures || [];
+
+    // Inheritance (super)
+    PIXI.MovieClip.call(this, textures);
+
 
     // New properties
     this.facingDirection = params.facingDirection || MovingObject.DIRECTION_DOWN;
@@ -23,7 +27,7 @@ function MovingObject (params) {
 }
 
 // Inheritance
-MovingObject.prototype = Object.create(PIXI.Sprite);
+MovingObject.prototype = Object.create(PIXI.MovieClip.prototype);
 MovingObject.prototype.constructor = MovingObject;
 
 MovingObject.prototype.move = function () {

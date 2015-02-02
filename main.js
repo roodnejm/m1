@@ -46,6 +46,8 @@ var dude = new MovingObject({
 
 console.log(dude);
 
+stage.addChild(dude);
+
 //stage.addChild(new MovingObject(renderer,'n'));
 
 function animate() {
